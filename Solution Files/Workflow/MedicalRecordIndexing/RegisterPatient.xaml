@@ -1,0 +1,337 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="RegisterPatient" this:RegisterPatient.in_FirstName="test2" this:RegisterPatient.in_LastName="user" this:RegisterPatient.in_Gender="Male" this:RegisterPatient.in_Day="23" this:RegisterPatient.in_Month="April" this:RegisterPatient.in_Year="1980" this:RegisterPatient.in_Address="test address" this:RegisterPatient.in_City="test city" this:RegisterPatient.in_State="test state" this:RegisterPatient.in_Country="test country" this:RegisterPatient.in_PostalCode="123456" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_FirstName" Type="InArgument(x:String)" />
+    <x:Property Name="in_LastName" Type="InArgument(x:String)" />
+    <x:Property Name="in_Gender" Type="InArgument(x:String)" />
+    <x:Property Name="in_Day" Type="InArgument(x:String)" />
+    <x:Property Name="in_Month" Type="InArgument(x:String)" />
+    <x:Property Name="in_Year" Type="InArgument(x:String)" />
+    <x:Property Name="in_Address" Type="InArgument(x:String)" />
+    <x:Property Name="in_City" Type="InArgument(x:String)" />
+    <x:Property Name="in_State" Type="InArgument(x:String)" />
+    <x:Property Name="in_Country" Type="InArgument(x:String)" />
+    <x:Property Name="in_PostalCode" Type="InArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>562,4760</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>RegisterPatient_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Reflection</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.DataService.Activities.Core</AssemblyReference>
+      <AssemblyReference>UiPath.IntelligentOCR.StudioWeb.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.DocumentUnderstanding.ML.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.WorkflowEvents.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="RegisterPatient" sap:VirtualizedContainerService.HintSize="546,4695" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="SingleWindow" CloseMode="Never" DisplayName="Use Browser Edge: Home" sap:VirtualizedContainerService.HintSize="484,4584" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="90530da8-e94a-4352-aa0d-06407ea18a75" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,4367" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Register a patient'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_15" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="90530da8-e94a-4352-aa0d-06407ea18a75" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://demo.openmrs.org/openmrs/referenceapplication/home.page" ContentHash="0WE0MkwIcEaWi4inDqbs1g" CvTextArea="1271, 328, 132, 19" CvTextArgument="Register a patient" CvType="Text" DesignTimeRectangle="1254, 260, 166, 130" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Register a patient'" FullSelectorArgument="&lt;webctrl id='referenceapplication-registrationapp-registerPatient-homepageLink-referenceapplication-registrationapp-registerPatient-homepageLink-extension' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl id='referenceapplication-registrationapp-registerPatient-homepageLink-referenceapplication-registrationapp-registerPatient-homepageLink-extension' tag='A' type='button' class='btn btn-default btn-lg button app big align-self-center' aaname='                                                                                    Register a patient                 ' check:innerText='Register a patient' /&gt;" Guid="f4b42236-cc91-4480-9a09-3e27b741883e" InformativeScreenshot="9d2fa431cdc4c3601451b688874a4e11.png" Reference="oxk3wl4x8EilOe_Hg5UK1g/bRtHYXzVjke4eSgNRxtMEg" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Home' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Given (required)'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,218" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="90530da8-e94a-4352-aa0d-06407ea18a75" Text="[in_FirstName]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="http://uilabsopenmrs.westeurope.cloudapp.azure.com:8080/openmrs/registrationapp/registerPatient.page?appId=referenceapplication.registrationapp.registerPatient" ContentHash="K6dXpa5h_EaliTI2XR7tbA" CvElementArea="721, 378, 203, 37" CvType="InputBox" DesignTimeRectangle="723, 379, 199, 34" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT fr947-field'" FullSelectorArgument="&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' class='required focused ui-autocomplete-input error' aaname='         Given (required)     ' /&gt;" Guid="c14a0a79-a106-42e2-819d-ea26d7fcb07d" InformativeScreenshot="40e160b0eba3aca20e3b80ffe8d4862b.png" IsResponsive="True" Reference="oxk3wl4x8EilOe_Hg5UK1g/EDb6a_bLW0-0WToMYDv7OQ" ScopeSelectorArgument="&lt;html app='msedge.exe' title='OpenMRS Electronic Medical Record' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CvTextArea="722, 346, 129, 21" CvTextArgument="Given (required)" CvType="Text" DesignTimeRectangle="723, 338, 199, 36" ElementType="Text" FriendlyName="'Given (required)'" FullSelectorArgument="&lt;webctrl tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='' aaname='         Given      ' check:innerText='Given (required)' /&gt;" SearchSteps="FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Family Name (required)'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,218" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="90530da8-e94a-4352-aa0d-06407ea18a75" Text="[in_LastName]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="http://uilabsopenmrs.westeurope.cloudapp.azure.com:8080/openmrs/registrationapp/registerPatient.page?appId=referenceapplication.registrationapp.registerPatient" ContentHash="N4rEDxq4h06sbLd-Sjs-3Q" CvElementArea="1139, 378, 203, 37" CvType="InputBox" DesignTimeRectangle="1141, 379, 199, 34" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT fr5083-field'" FullSelectorArgument="&lt;webctrl name='familyName' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl name='familyName' tag='INPUT' type='text' class='required ui-autocomplete-input error' aaname='         Family Name (required)     ' /&gt;" Guid="c298345a-390e-4d1f-8443-74d23cecf782" InformativeScreenshot="79667edd4b6522ba5c5150875de760ae.png" IsResponsive="True" Reference="oxk3wl4x8EilOe_Hg5UK1g/fKjK_rCZtUaBEV04c1M9cw" ScopeSelectorArgument="&lt;html app='msedge.exe' title='OpenMRS Electronic Medical Record' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CvTextArea="1140, 346, 194, 22" CvTextArgument="Family Name (required)" CvType="Text" DesignTimeRectangle="1141, 338, 199, 36" ElementType="Text" FriendlyName="'Family Name (required)'" FullSelectorArgument="&lt;webctrl aaname='         Family Name      ' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='         Family Name      ' tag='LABEL' type='' class='' check:innerText='Family Name (required)' /&gt;" SearchSteps="FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'ICON'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="90530da8-e94a-4352-aa0d-06407ea18a75" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="http://uilabsopenmrs.westeurope.cloudapp.azure.com:8080/openmrs/registrationapp/registerPatient.page?appId=referenceapplication.registrationapp.registerPatient" ContentHash="lLZ0bdIYO06e1iLFIT8AZg" CvElementArea="1389, 513, 55, 41" CvTextArea="1410, 524, 13, 17" CvTextArgument="&gt;" CvType="Button" DesignTimeRectangle="1412, 525, 10, 16" DesignTimeScaleFactor="1" ElementType="Icon" FriendlyName="'ICON'" FullSelectorArgument="&lt;webctrl parentid='next-button' tag='ICON' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='next-button' tag='ICON' type='' class='fas fa-chevron-right' aaname='' /&gt;" Guid="414f5af1-6ddc-4c12-bdaa-3e198a979c12" InformativeScreenshot="460dfeb856fcd4512b5eb25ecce3e85b.png" Reference="oxk3wl4x8EilOe_Hg5UK1g/7FdZ1lOOJ0W0GHJjVvekSw" ScopeSelectorArgument="&lt;html app='msedge.exe' title='OpenMRS Electronic Medical Record' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Double" DisplayName="Click 'Gender'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="90530da8-e94a-4352-aa0d-06407ea18a75" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="http://uilabsopenmrs.westeurope.cloudapp.azure.com:8080/openmrs/registrationapp/registerPatient.page?appId=referenceapplication.registrationapp.registerPatient" ContentHash="bthOaKvTk0KJMFUyQ0apsw" CvElementArea="723, 336, 202, 58" CvType="InputBox" DesignTimeRectangle="1227, 499, 26, 24" DesignTimeScaleFactor="1" FriendlyName="'Gender'" FullSelectorArgument="&lt;webctrl id='gender-field' tag='SELECT' /&gt;&lt;webctrl aaname='Female' tag='OPTION' /&gt;" FuzzySelectorArgument="[string.Format(&quot;&lt;webctrl id='gender-field' tag='SELECT' /&gt;&lt;webctrl aaname='{0}' tag='OPTION' type='' class='' check:innerText='{0}' /&gt;&quot;, in_Gender)]" Guid="44c4f650-a920-4b47-9b04-5b66d517144b" ImageBase64="" InformativeScreenshot="ecef3432f6081ee31aeaa9b042bf35df.png" Reference="oxk3wl4x8EilOe_Hg5UK1g/uNFhx5QukEKb5TE_y1MoGA" ScopeSelectorArgument="&lt;html app='msedge.exe' title='OpenMRS Electronic Medical Record' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'ICON'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="90530da8-e94a-4352-aa0d-06407ea18a75" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="http://uilabsopenmrs.westeurope.cloudapp.azure.com:8080/openmrs/registrationapp/registerPatient.page?appId=referenceapplication.registrationapp.registerPatient" ContentHash="lLZ0bdIYO06e1iLFIT8AZg" CvElementArea="1389, 513, 55, 41" CvTextArea="1410, 524, 13, 17" CvTextArgument="&gt;" CvType="Button" DesignTimeRectangle="1412, 525, 10, 16" DesignTimeScaleFactor="1" ElementType="Icon" FriendlyName="'ICON'" FullSelectorArgument="&lt;webctrl parentid='next-button' tag='ICON' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='next-button' tag='ICON' type='' class='fas fa-chevron-right' aaname='' /&gt;" Guid="414f5af1-6ddc-4c12-bdaa-3e198a979c12" InformativeScreenshot="460dfeb856fcd4512b5eb25ecce3e85b.png" Reference="oxk3wl4x8EilOe_Hg5UK1g/7FdZ1lOOJ0W0GHJjVvekSw" ScopeSelectorArgument="&lt;html app='msedge.exe' title='OpenMRS Electronic Medical Record' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="0" />
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Day'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,218" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="90530da8-e94a-4352-aa0d-06407ea18a75" Text="[in_Day]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://demo.openmrs.org/openmrs/registrationapp/registerPatient.page?appId=referenceapplication.registrationapp.registerPatient" ContentHash="ZPob5wM7vk6_yM9uJGntJw" CvElementArea="720, 378, 78, 38" CvType="InputBox" DesignTimeRectangle="723, 380, 73, 34" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'Day'" FullSelectorArgument="&lt;webctrl id='birthdateDay-field' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='birthdateDay-field' tag='INPUT' type='text' class='day number numeric-range date-component requiredTitle focused' aaname='         Day (required)     ' /&gt;" Guid="1893b857-625f-4094-8cd5-27ba4bdea9ab" InformativeScreenshot="fd6beb87b8934e3d869d745d20a7fc30.png" IsResponsive="True" Reference="oxk3wl4x8EilOe_Hg5UK1g/KI5ODJleXEKdjlfC5heyaA" ScopeSelectorArgument="&lt;html app='msedge.exe' title='OpenMRS Electronic Medical Record' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CvTextArea="722, 347, 112, 22" CvTextArgument="Day (required)" CvType="Text" DesignTimeRectangle="723, 339, 110, 36" ElementType="Text" FriendlyName="'Day'" FullSelectorArgument="&lt;webctrl parentid='demographics-birthdate' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='demographics-birthdate' tag='LABEL' type='' class='' aaname='         Day      ' check:innerText='Day (required)' /&gt;" SearchSteps="FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NSelectItem DisplayName="Select Item 'Month'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NSelectItem_1" Item="[in_Month]" ScopeIdentifier="90530da8-e94a-4352-aa0d-06407ea18a75" Version="V3">
+              <uix:NSelectItem.Items>
+                <scg:List x:TypeArguments="x:String" Capacity="13">
+                  <x:String>Select</x:String>
+                  <x:String>January</x:String>
+                  <x:String>February</x:String>
+                  <x:String>March</x:String>
+                  <x:String>April</x:String>
+                  <x:String>May</x:String>
+                  <x:String>June</x:String>
+                  <x:String>July</x:String>
+                  <x:String>August</x:String>
+                  <x:String>September</x:String>
+                  <x:String>October</x:String>
+                  <x:String>November</x:String>
+                  <x:String>December</x:String>
+                </scg:List>
+              </uix:NSelectItem.Items>
+              <uix:NSelectItem.Target>
+                <uix:TargetAnchorable BrowserURL="https://demo.openmrs.org/openmrs/registrationapp/registerPatient.page?appId=referenceapplication.registrationapp.registerPatient" ContentHash="7Vlzu7sIoUeV5e5xeAPySg" CvTextArea="857, 390, 46, 15" CvTextArgument="Select" CvType="Text" DesignTimeRectangle="843, 380, 200, 36" DesignTimeScaleFactor="1" ElementType="DropDown" FriendlyName="'Month'" FullSelectorArgument="&lt;webctrl id='birthdateMonth-field' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='birthdateMonth-field' tag='SELECT' type='' class='month date-component requiredTitle' aaname='         Month (required)     ' /&gt;" Guid="5cbec848-40a4-49e5-980f-05c6948c00a5" ImageBase64="" InformativeScreenshot="b7d8304bf9c5f72235f6431e4c459dc1.png" Reference="oxk3wl4x8EilOe_Hg5UK1g/fRHBVCd6KEKLudPT8XfOcA" ScopeSelectorArgument="&lt;html app='msedge.exe' title='OpenMRS Electronic Medical Record' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CvTextArea="843, 347, 136, 21" CvTextArgument="Month (required)" CvType="Text" DesignTimeRectangle="843, 339, 200, 36" ElementType="Text" FriendlyName="'Month'" FullSelectorArgument="&lt;webctrl parentid='birthdateMonth' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='birthdateMonth' tag='LABEL' type='' class='' aaname='         Month      ' check:innerText='Month (required)' /&gt;" SearchSteps="FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NSelectItem.Target>
+            </uix:NSelectItem>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Year'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,218" sap2010:WorkflowViewState.IdRef="NTypeInto_4" ScopeIdentifier="90530da8-e94a-4352-aa0d-06407ea18a75" Text="[in_Year]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://demo.openmrs.org/openmrs/registrationapp/registerPatient.page?appId=referenceapplication.registrationapp.registerPatient" ContentHash="Zq07cjM3y0uv23HXTS_VuA" CvElementArea="1051, 378, 77, 37" CvType="InputBox" DesignTimeRectangle="1053, 380, 73, 34" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'Year'" FullSelectorArgument="&lt;webctrl id='birthdateYear-field' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='birthdateYear-field' tag='INPUT' type='text' class='year number numeric-range date-component requiredTitle' aaname='         Year (required)     ' /&gt;" Guid="e0df225d-0efc-47b0-941d-aef60da50e77" InformativeScreenshot="194af7f191d6a2755ba47cf0fd244199.png" IsResponsive="True" Reference="oxk3wl4x8EilOe_Hg5UK1g/0guw0rY-h0eKKKybr6wSeA" ScopeSelectorArgument="&lt;html app='msedge.exe' title='OpenMRS Electronic Medical Record' /&gt;" SearchSteps="Selector, CV" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CvTextArea="1051, 347, 119, 21" CvTextArgument="Year (required)" CvType="Text" DesignTimeRectangle="1053, 339, 116, 36" ElementType="Text" FriendlyName="'Year'" FullSelectorArgument="&lt;webctrl aaname='         Year      ' parentid='demographics-birthdate' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='         Year      ' parentid='demographics-birthdate' tag='LABEL' type='' class='' check:innerText='Year (required)' /&gt;" SearchSteps="FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'ICON'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="90530da8-e94a-4352-aa0d-06407ea18a75" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="http://uilabsopenmrs.westeurope.cloudapp.azure.com:8080/openmrs/registrationapp/registerPatient.page?appId=referenceapplication.registrationapp.registerPatient" ContentHash="lLZ0bdIYO06e1iLFIT8AZg" CvElementArea="1389, 513, 55, 41" CvTextArea="1410, 524, 13, 17" CvTextArgument="&gt;" CvType="Button" DesignTimeRectangle="1412, 525, 10, 16" DesignTimeScaleFactor="1" ElementType="Icon" FriendlyName="'ICON'" FullSelectorArgument="&lt;webctrl parentid='next-button' tag='ICON' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='next-button' tag='ICON' type='' class='fas fa-chevron-right' aaname='' /&gt;" Guid="414f5af1-6ddc-4c12-bdaa-3e198a979c12" InformativeScreenshot="460dfeb856fcd4512b5eb25ecce3e85b.png" Reference="oxk3wl4x8EilOe_Hg5UK1g/7FdZ1lOOJ0W0GHJjVvekSw" ScopeSelectorArgument="&lt;html app='msedge.exe' title='OpenMRS Electronic Medical Record' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="0" />
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Address'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,218" sap2010:WorkflowViewState.IdRef="NTypeInto_5" ScopeIdentifier="90530da8-e94a-4352-aa0d-06407ea18a75" Text="[in_Address]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="http://uilabsopenmrs.westeurope.cloudapp.azure.com:8080/openmrs/registrationapp/registerPatient.page?appId=referenceapplication.registrationapp.registerPatient" ContentHash="9VB-HJ8BcE-ZiMxYDcS_Xw" CvElementArea="720, 376, 371, 37" CvType="InputBox" DesignTimeRectangle="723, 378, 366, 34" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT address1'" FullSelectorArgument="&lt;webctrl id='address1' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='address1' tag='INPUT' type='text' class='' aaname='' /&gt;" Guid="b34d5b45-8f92-4565-9b6a-e9e10cdb9304" InformativeScreenshot="782c9d4e169116cb34ee421608cf1a2f.png" IsResponsive="True" Reference="oxk3wl4x8EilOe_Hg5UK1g/2Q5p6dCNdE28STEBcwbymw" ScopeSelectorArgument="&lt;html app='msedge.exe' title='OpenMRS Electronic Medical Record' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CvTextArea="720, 346, 76, 17" CvTextArgument="Address" CvType="Text" DesignTimeRectangle="723, 338, 366, 35" ElementType="Text" FriendlyName="'Address'" FullSelectorArgument="&lt;webctrl name='address1' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl name='address1' tag='LABEL' type='' class='' aaname=' &amp;#x9;        &amp;#x9;&amp;#x9;&amp;#x9;Address &amp;#x9;        &amp;#x9;&amp;#x9;' check:innerText='Address' /&gt;" SearchSteps="FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'City/Village'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,218" sap2010:WorkflowViewState.IdRef="NTypeInto_6" ScopeIdentifier="90530da8-e94a-4352-aa0d-06407ea18a75" Text="[in_City]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="http://uilabsopenmrs.westeurope.cloudapp.azure.com:8080/openmrs/registrationapp/registerPatient.page?appId=referenceapplication.registrationapp.registerPatient" ContentHash="kn5fPeFf_ESnSw7xgUcZwQ" CvElementArea="721, 543, 118, 36" CvType="InputBox" DesignTimeRectangle="723, 544, 115, 34" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT cityVillage'" FullSelectorArgument="&lt;webctrl id='cityVillage' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='cityVillage' tag='INPUT' type='text' class='' aaname='' /&gt;" Guid="3cc9fb02-d155-467c-9b4a-2aee861225cb" InformativeScreenshot="6df074f2e53f97017e5338d021a96cff.png" IsResponsive="True" Reference="oxk3wl4x8EilOe_Hg5UK1g/IW-JRp5DM0GsQJwySJqb3Q" ScopeSelectorArgument="&lt;html app='msedge.exe' title='OpenMRS Electronic Medical Record' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CvTextArea="722, 511, 100, 23" CvTextArgument="City/Village" CvType="Text" DesignTimeRectangle="723, 504, 115, 35" ElementType="Text" FriendlyName="'City/Village'" FullSelectorArgument="&lt;webctrl name='cityVillage' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl name='cityVillage' tag='LABEL' type='' class='' aaname=' &amp;#x9;        &amp;#x9;&amp;#x9;&amp;#x9;City/Village &amp;#x9;        &amp;#x9;&amp;#x9;' check:innerText='City/Village' /&gt;" SearchSteps="FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'State/Province'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,218" sap2010:WorkflowViewState.IdRef="NTypeInto_7" ScopeIdentifier="90530da8-e94a-4352-aa0d-06407ea18a75" Text="[in_State]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="http://uilabsopenmrs.westeurope.cloudapp.azure.com:8080/openmrs/registrationapp/registerPatient.page?appId=referenceapplication.registrationapp.registerPatient" ContentHash="6Mgjc77hF0WmbrtYkFsICw" CvElementArea="846, 543, 118, 36" CvType="InputBox" DesignTimeRectangle="848, 544, 115, 34" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT stateProvince'" FullSelectorArgument="&lt;webctrl id='stateProvince' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='stateProvince' tag='INPUT' type='text' class='' aaname='' /&gt;" Guid="d63ad4b6-a8be-4419-9bfa-ebe9303b7e52" InformativeScreenshot="2e8b5cef14b1ce8403155b0d85a80e65.png" IsResponsive="True" Reference="oxk3wl4x8EilOe_Hg5UK1g/mSxofkrvlEGVeNaSW8KcWw" ScopeSelectorArgument="&lt;html app='msedge.exe' title='OpenMRS Electronic Medical Record' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CvTextArea="846, 512, 132, 17" CvTextArgument="State/Province" CvType="Text" DesignTimeRectangle="848, 504, 130, 35" ElementType="Text" FriendlyName="'State/Province'" FullSelectorArgument="&lt;webctrl name='stateProvince' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl name='stateProvince' tag='LABEL' type='' class='' aaname=' &amp;#x9;        &amp;#x9;&amp;#x9;&amp;#x9;State/Province &amp;#x9;        &amp;#x9;&amp;#x9;' check:innerText='State/Province' /&gt;" SearchSteps="FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Country'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,218" sap2010:WorkflowViewState.IdRef="NTypeInto_8" ScopeIdentifier="90530da8-e94a-4352-aa0d-06407ea18a75" Text="[in_Country]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="http://uilabsopenmrs.westeurope.cloudapp.azure.com:8080/openmrs/registrationapp/registerPatient.page?appId=referenceapplication.registrationapp.registerPatient" ContentHash="K48pMINjJk-G6cgEDzMEJg" CvElementArea="986, 543, 119, 37" CvType="InputBox" DesignTimeRectangle="988, 544, 115, 34" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT country'" FullSelectorArgument="&lt;webctrl id='country' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='country' tag='INPUT' type='text' class='' aaname='' /&gt;" Guid="9c5d771a-e83f-4775-a832-12c1c3fe6f71" InformativeScreenshot="5d81c5b443814df885a2b42b86d42291.png" IsResponsive="True" Reference="oxk3wl4x8EilOe_Hg5UK1g/-f5gBsKev0aih3jISSLoeg" ScopeSelectorArgument="&lt;html app='msedge.exe' title='OpenMRS Electronic Medical Record' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CvTextArea="987, 512, 74, 22" CvTextArgument="Country" CvType="Text" DesignTimeRectangle="988, 504, 115, 35" ElementType="Text" FriendlyName="'Country'" FullSelectorArgument="&lt;webctrl name='country' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl name='country' tag='LABEL' type='' class='' aaname=' &amp;#x9;        &amp;#x9;&amp;#x9;&amp;#x9;Country &amp;#x9;        &amp;#x9;&amp;#x9;' check:innerText='Country' /&gt;" SearchSteps="FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Postal Code'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,218" sap2010:WorkflowViewState.IdRef="NTypeInto_9" ScopeIdentifier="90530da8-e94a-4352-aa0d-06407ea18a75" Text="[in_PostalCode]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="http://uilabsopenmrs.westeurope.cloudapp.azure.com:8080/openmrs/registrationapp/registerPatient.page?appId=referenceapplication.registrationapp.registerPatient" ContentHash="VidoX-8kB06jG2wDbepxoA" CvElementArea="1111, 543, 118, 37" CvType="InputBox" DesignTimeRectangle="1113, 544, 115, 34" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT postalCode'" FullSelectorArgument="&lt;webctrl id='postalCode' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='postalCode' tag='INPUT' type='text' class='' aaname='' /&gt;" Guid="5066f9a0-7466-43f3-b387-bb3b198601f9" InformativeScreenshot="22a42affd63f338a217ccbfe5d62718c.png" IsResponsive="True" Reference="oxk3wl4x8EilOe_Hg5UK1g/XMr2Vm8jRUeXmE5DEZtoJA" ScopeSelectorArgument="&lt;html app='msedge.exe' title='OpenMRS Electronic Medical Record' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CvTextArea="1112, 512, 107, 17" CvTextArgument="Postal Code" CvType="Text" DesignTimeRectangle="1113, 504, 115, 35" ElementType="Text" FriendlyName="'Postal Code'" FullSelectorArgument="&lt;webctrl name='postalCode' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl name='postalCode' tag='LABEL' type='' class='' aaname=' &amp;#x9;        &amp;#x9;&amp;#x9;&amp;#x9;Postal Code &amp;#x9;        &amp;#x9;&amp;#x9;' check:innerText='Postal Code' /&gt;" SearchSteps="FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'ICON'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_6" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="90530da8-e94a-4352-aa0d-06407ea18a75" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="http://uilabsopenmrs.westeurope.cloudapp.azure.com:8080/openmrs/registrationapp/registerPatient.page?appId=referenceapplication.registrationapp.registerPatient" ContentHash="lLZ0bdIYO06e1iLFIT8AZg" CvElementArea="1389, 513, 55, 41" CvTextArea="1410, 524, 13, 17" CvTextArgument="&gt;" CvType="Button" DesignTimeRectangle="1412, 525, 10, 16" DesignTimeScaleFactor="1" ElementType="Icon" FriendlyName="'ICON'" FullSelectorArgument="&lt;webctrl parentid='next-button' tag='ICON' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='next-button' tag='ICON' type='' class='fas fa-chevron-right' aaname='' /&gt;" Guid="414f5af1-6ddc-4c12-bdaa-3e198a979c12" InformativeScreenshot="460dfeb856fcd4512b5eb25ecce3e85b.png" Reference="oxk3wl4x8EilOe_Hg5UK1g/7FdZ1lOOJ0W0GHJjVvekSw" ScopeSelectorArgument="&lt;html app='msedge.exe' title='OpenMRS Electronic Medical Record' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="0" />
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'ICON'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_7" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="90530da8-e94a-4352-aa0d-06407ea18a75" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="http://uilabsopenmrs.westeurope.cloudapp.azure.com:8080/openmrs/registrationapp/registerPatient.page?appId=referenceapplication.registrationapp.registerPatient" ContentHash="lLZ0bdIYO06e1iLFIT8AZg" CvElementArea="1389, 513, 55, 41" CvTextArea="1410, 524, 13, 17" CvTextArgument="&gt;" CvType="Button" DesignTimeRectangle="1412, 525, 10, 16" DesignTimeScaleFactor="1" ElementType="Icon" FriendlyName="'ICON'" FullSelectorArgument="&lt;webctrl parentid='next-button' tag='ICON' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='next-button' tag='ICON' type='' class='fas fa-chevron-right' aaname='' /&gt;" Guid="414f5af1-6ddc-4c12-bdaa-3e198a979c12" InformativeScreenshot="460dfeb856fcd4512b5eb25ecce3e85b.png" Reference="oxk3wl4x8EilOe_Hg5UK1g/7FdZ1lOOJ0W0GHJjVvekSw" ScopeSelectorArgument="&lt;html app='msedge.exe' title='OpenMRS Electronic Medical Record' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="0" />
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'ICON'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_8" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="90530da8-e94a-4352-aa0d-06407ea18a75" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="http://uilabsopenmrs.westeurope.cloudapp.azure.com:8080/openmrs/registrationapp/registerPatient.page?appId=referenceapplication.registrationapp.registerPatient" ContentHash="lLZ0bdIYO06e1iLFIT8AZg" CvElementArea="1389, 513, 55, 41" CvTextArea="1410, 524, 13, 17" CvTextArgument="&gt;" CvType="Button" DesignTimeRectangle="1412, 525, 10, 16" DesignTimeScaleFactor="1" ElementType="Icon" FriendlyName="'ICON'" FullSelectorArgument="&lt;webctrl parentid='next-button' tag='ICON' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='next-button' tag='ICON' type='' class='fas fa-chevron-right' aaname='' /&gt;" Guid="414f5af1-6ddc-4c12-bdaa-3e198a979c12" InformativeScreenshot="460dfeb856fcd4512b5eb25ecce3e85b.png" Reference="oxk3wl4x8EilOe_Hg5UK1g/7FdZ1lOOJ0W0GHJjVvekSw" ScopeSelectorArgument="&lt;html app='msedge.exe' title='OpenMRS Electronic Medical Record' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="0" />
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Confirm'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_9" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="90530da8-e94a-4352-aa0d-06407ea18a75" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="http://uilabsopenmrs.westeurope.cloudapp.azure.com:8080/openmrs/registrationapp/registerPatient.page?appId=referenceapplication.registrationapp.registerPatient" ContentHash="_WFgp5-K3EiubXOk-C2j9w" CvElementArea="1309, 520, 105, 40" CvTextArea="1330, 532, 63, 16" CvTextArgument="Confirm" CvType="Button" DesignTimeRectangle="1311, 522, 102, 37" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Confirm'" FullSelectorArgument="&lt;webctrl id='submit' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='submit' tag='INPUT' type='submit' class='submitButton confirm right' aaname='Confirm' check:text='Confirm' /&gt;" Guid="3d98b9fe-2cdc-48bf-9fe1-31a9b4ddb23c" InformativeScreenshot="116ff4146eb5b75a5f5b29e1cc8a8394.png" Reference="oxk3wl4x8EilOe_Hg5UK1g/XzMG6vzySUuHcwFCAfzNew" ScopeSelectorArgument="&lt;html app='msedge.exe' title='OpenMRS Electronic Medical Record' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-8, -8, 1936, 1056" BrowserType="Edge" IconBase64="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" InformativeScreenshot="c44201a9970234c2a0c95fad994576c6.jpg" Selector="&lt;html app='msedge.exe' title='Home' /&gt;" Title="OpenMRS Electronic Medical Record" Url="https://demo.openmrs.org/openmrs/referenceapplication/home.page" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

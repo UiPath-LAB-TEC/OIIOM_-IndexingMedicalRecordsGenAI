@@ -1,0 +1,92 @@
+{
+  "name": "MedicalRecordIndexing",
+  "projectId": "8e33e79c-7100-44fa-9577-7c6c79449939",
+  "description": "Blank Process",
+  "main": "Main.xaml",
+  "dependencies": {
+    "UiPath.DataService.Activities": "[23.10.0]",
+    "UiPath.DocumentUnderstanding.Activities": "[2.6.0-preview]",
+    "UiPath.Excel.Activities": "[2.22.3]",
+    "UiPath.Mail.Activities": "[1.22.1]",
+    "UiPath.System.Activities": "[23.10.4]",
+    "UiPath.Testing.Activities": "[23.10.0]",
+    "UiPath.UIAutomation.Activities": "[23.10.8]",
+    "UiPath.WorkflowEvents.Activities": "[2.0.0]",
+    "UiPathTeam.AttendedRobotStatus.Activities": "[2.0.0]"
+  },
+  "webServices": [],
+  "entitiesStores": [
+    {
+      "serviceDocument": ".entities/EntitiesStore.json",
+      "tenantName": "DemoRepository",
+      "namespace": "MedicalRecordIndexing",
+      "uniqueReference": "yGmOKWE/pG4LCYhkpGP0p6xhMk2QPvOXMZ9ghIFYueE="
+    }
+  ],
+  "schemaVersion": "4.0",
+  "studioVersion": "23.10.0.0",
+  "projectVersion": "1.0.17",
+  "runtimeOptions": {
+    "autoDispose": false,
+    "netFrameworkLazyLoading": false,
+    "isPausable": true,
+    "isAttended": false,
+    "requiresUserInteraction": true,
+    "supportsPersistence": false,
+    "workflowSerialization": "DataContract",
+    "excludedLoggedData": [
+      "Private:*",
+      "*password*"
+    ],
+    "executionType": "Workflow",
+    "readyForPiP": false,
+    "startsInPiP": false,
+    "mustRestoreAllDependencies": true,
+    "pipType": "ChildSession"
+  },
+  "designOptions": {
+    "projectProfile": "Developement",
+    "outputType": "Process",
+    "libraryOptions": {
+      "includeOriginalXaml": false,
+      "privateWorkflows": []
+    },
+    "processOptions": {
+      "ignoredFiles": []
+    },
+    "fileInfoCollection": [],
+    "modernBehavior": true,
+    "saveToCloud": false
+  },
+  "expressionLanguage": "VisualBasic",
+  "entryPoints": [
+    {
+      "filePath": "ExtractInfoFromRecordFIle.xaml",
+      "uniqueId": "ae9faa34-3dff-434b-af9d-54f292dba80c",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "Main.xaml",
+      "uniqueId": "26fd9d7c-bd24-45a2-b237-5c4e93783358",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "ResetDataService.xaml",
+      "uniqueId": "0dd93747-1224-4dc4-86a6-3e27b11ea1c5",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "CreatePatientEHR.xaml",
+      "uniqueId": "f13422b9-6eb5-47c6-a0b5-0b28c398dbb2",
+      "input": [],
+      "output": []
+    }
+  ],
+  "isTemplate": false,
+  "templateProjectData": {},
+  "publishData": {},
+  "targetFramework": "Windows"
+}

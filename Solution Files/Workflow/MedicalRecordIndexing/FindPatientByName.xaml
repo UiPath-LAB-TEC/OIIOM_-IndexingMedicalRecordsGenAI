@@ -1,0 +1,150 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="FindPatientByName" this:FindPatientByName.in_Name="test2 user" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_Name" Type="InArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>562,1120</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>FindPatientByName_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Reflection</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.DataService.Activities.Core</AssemblyReference>
+      <AssemblyReference>UiPath.IntelligentOCR.StudioWeb.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.DocumentUnderstanding.ML.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.WorkflowEvents.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="FindPatientByName" sap:VirtualizedContainerService.HintSize="546,1055" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Edge: Home" sap:VirtualizedContainerService.HintSize="484,944" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="7b4fab35-83d7-4b18-81a5-5955f1c701fe" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,727" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Find Patient Record'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="7b4fab35-83d7-4b18-81a5-5955f1c701fe" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="http://uilabsopenmrs.westeurope.cloudapp.azure.com:8080/openmrs/index.htm" ContentHash="ZAg7UZ-TjkOpCpY9rwMHuQ" DesignTimeRectangle="493, 213, 166, 130" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Find Patient Record'" FullSelectorArgument="&lt;webctrl id='coreapps-activeVisitsHomepageLink-coreapps-activeVisitsHomepageLink-extension' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl id='coreapps-activeVisitsHomepageLink-coreapps-activeVisitsHomepageLink-extension' tag='A' type='button' class='btn btn-default btn-lg button app big align-self-center' aaname='                                                                                    Find Patient Record                 ' check:innerText='Find Patient Record' /&gt;" Guid="7a583776-8591-4a33-81e4-8e85fc653178" InformativeScreenshot="d1add74981935ce9dd885dd76325c07a.png" Reference="oxk3wl4x8EilOe_Hg5UK1g/5kiSf1aJl02Z5DGv7VugLA" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Home' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT patient-search'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,218" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="7b4fab35-83d7-4b18-81a5-5955f1c701fe" Text="[in_Name]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="http://uilabsopenmrs.westeurope.cloudapp.azure.com:8080/openmrs/coreapps/findpatient/findPatient.page?app=coreapps.findPatient" ContentHash="kXh1g5Ur8kKldWaMUmeyfg" DesignTimeRectangle="483, 282, 750, 38" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT patient-search'" FullSelectorArgument="&lt;webctrl id='patient-search' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='patient-search' tag='INPUT' type='text' class='form-control' aaname='' /&gt;" Guid="20f00a24-4052-475b-b9bf-855694884946" InformativeScreenshot="7fe3e08339757ef090f2fdf1a5109dc9.png" Reference="oxk3wl4x8EilOe_Hg5UK1g/ldCoW2FgIE-TiAKYnQO42g" ScopeSelectorArgument="&lt;html app='msedge.exe' title='OpenMRS Electronic Medical Record' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click Patient Name" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="7b4fab35-83d7-4b18-81a5-5955f1c701fe" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="http://uilabsopenmrs.westeurope.cloudapp.azure.com:8080/openmrs/coreapps/findpatient/findPatient.page?app=coreapps.findPatient" ContentHash="FMiGar_6iEqaxbXOJ-i9xQ" DesignTimeRectangle="731, 372, 164, 35" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'test FamilyName'" FullSelectorArgument="&lt;webctrl id='patient-search-results-table' tag='TABLE' /&gt;&lt;webctrl isleaf='1' tableRow='2' tag='TD' /&gt;" FuzzySelectorArgument="[string.Format(&quot;&lt;webctrl id='patient-search-results-table' tag='TABLE' /&gt;&lt;webctrl isleaf='1' type='' tag='TD' class='' aaname='{0}' check:innerText='{0}' /&gt;&quot;, in_Name)]" Guid="f982eac2-464d-4669-b75f-7beaf1909902" ImageBase64="" InformativeScreenshot="6682653bacf377f75f754d0ce8d084fb.png" Reference="oxk3wl4x8EilOe_Hg5UK1g/4YfNb1W9yEq3aBOIkT8zbw" ScopeSelectorArgument="&lt;html app='msedge.exe' title='OpenMRS Electronic Medical Record' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Edge" ContentHash="E2L8YXfZh0OWB03L0pvWdQ" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAACwUlEQVQ4T23TT0yScRzH8Y9zeVAz/Iea2kzNtXXJ1dbKMmt1qWxoCIjWBEXNzNSctgZLluj8EwshZdqsdMrzEFpOa8atra3VKdc61NapU/+GSJES+fT9yUPj0OE12ODzht9vgDLFHN5oS/CnPgOrulwmm1whs+Q1eUV40kikBIImE+7Wg8DIAKBQOmFUm7Ciy4dftwNeXZ6F3iT8j1eX2/KrLgceXR5K+poBWx9QpZyBTPEYBnU/fFRfq8+eEAcB8oF8FMdCUJvd4aNAUX8LffogYO0JBaqV05sRvXqAIjtHf+hyJmm0l6STDHI4WJu18LC9uKvAfB240x8ai4EkYlYrHffPKBbvuWvKTwr1aeH7+EfQbI/W6+Uq2G87aciRPhLDAhoiMJVKbpEeoy3VnRAaEtm3CY1rs/ClIR/bLN1xsJmWaSiIjrDAlBjYIEflChfqVBO4e/4yvJoCBGi81HoI5aYGurRe9rW1EQEDC7jFwHeSw+5DpeQglz/Ccvs+7De1IorddvjSrD0HIgJjLPBMDHhILsGp0qcYv9aE964s2CaPIcZmBCy3gGEKWXuKIgJ2FhgXA8xpZYUTphY93toLEXTFQXDG4slUITRj1dg1cpUCvW0RgQ4WkIcDqgr+pabqwZav05lYd22Fh5OSVAR4yWZIM16ZhuHBT+LYTwpZII40qhWOblnZfO9z8wnl+mx87AoNw7xcCn5zEql+olSLYbOehgZygUSxQOiHJJvHjaab8LskVhq8oKGc7CZ7iNbHJb/zcSldxXb6CVuGwhcKnCufw1nZAgwXTfA4pPjpTLTRQBD5yRp7TkcR1vnETg+fiiL7JYqY6VLpz2Rs7sZQWxe+zWSwMTuzMSIQKUiv1fr5JHx2pKNsrAbH7Y1AYDYedGas8snhM0tIFZkgbrJERkkp2bwbOg42+AQIfAL+AqZuvB9TOrPGAAAAAElFTkSuQmCC" InformativeScreenshot="50bf19fddfad2494ac31dab154126d6c.jpg" Reference="oxk3wl4x8EilOe_Hg5UK1g/3s9p9KGO3U-kpeD3HFaegA" Selector="&lt;html app='msedge.exe' title='Home' /&gt;" Title="Home" Url="http://uilabsopenmrs.westeurope.cloudapp.azure.com:8080/openmrs/index.htm" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
